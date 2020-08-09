@@ -47,7 +47,7 @@ $messagesHtml = messagesPopAllToHtml();
 
 Header( 'Cache-Control: no-cache, must-revalidate');    // HTTP/1.1
 Header( 'Content-Type: text/html;charset=utf-8' );      // TODO- proper XHTML headers...
-Header( 'Creds: admin:Arishti ' );     // Date in the past<!-- Global site tag (gtag.js) - Google Analytics -->
+Header( 'Creds: admin:Arishti ' );     // Date in the past
 
 
 
