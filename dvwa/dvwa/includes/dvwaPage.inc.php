@@ -253,7 +253,7 @@ function dvwaHtmlEcho( $pPage ) {
 			break;
 		default:
 			$securityLevelHtml = 'low';
-			break
+		break;
 	}
 	// -- END (security cookie)
 
