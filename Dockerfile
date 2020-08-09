@@ -1,6 +1,6 @@
 FROM debian:9.2
 
-LABEL maintainer "opsxcq@strm.sh"
+LABEL maintainer "mail@anir0y.in"
 
 RUN apt-get update && \
     apt-get upgrade -y && \
