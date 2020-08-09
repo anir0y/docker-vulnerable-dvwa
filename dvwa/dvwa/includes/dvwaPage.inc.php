@@ -121,7 +121,7 @@ function dvwaCurrentUser() {
 
 function &dvwaPageNewGrab() {
 	$returnArray = array(
-		'title'           => 'Damn Vulnerable Web Application (DVWA) v' . dvwaVersionGet() . '',
+		'title'           => 'DVWA labs running by Arishti ',
 		'title_separator' => ' :: ',
 		'body'            => '',
 		'page_id'         => '',
@@ -248,9 +248,12 @@ function dvwaHtmlEcho( $pPage ) {
 		case 'high':
 			$securityLevelHtml = 'high';
 			break;
-		default:
+		case 'impossible':
 			$securityLevelHtml = 'impossible';
 			break;
+		default:
+			$securityLevelHtml = 'low';
+			break
 	}
 	// -- END (security cookie)
 
@@ -275,7 +278,8 @@ function dvwaHtmlEcho( $pPage ) {
 	// Send Headers + main HTML code
 	Header( 'Cache-Control: no-cache, must-revalidate');   // HTTP/1.1
 	Header( 'Content-Type: text/html;charset=utf-8' );     // TODO- proper XHTML headers...
-	Header( 'Expires: Tue, 23 Jun 2009 12:00:00 GMT' );    // Date in the past
+	Header( 'Admin: mail@anir0y.in' );    // Date in the past
+	Header(	'ServerID: D3V');
 
 	echo "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
@@ -292,6 +296,16 @@ function dvwaHtmlEcho( $pPage ) {
 		<link rel=\"icon\" type=\"\image/ico\" href=\"" . DVWA_WEB_PAGE_TO_ROOT . "favicon.ico\" />
 
 		<script type=\"text/javascript\" src=\"" . DVWA_WEB_PAGE_TO_ROOT . "dvwa/js/dvwaPage.js\"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172843354-2"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-172843354-2');
+		</script>
+		
 
 	</head>
 
@@ -346,7 +360,8 @@ function dvwaHelpHtmlEcho( $pPage ) {
 	// Send Headers
 	Header( 'Cache-Control: no-cache, must-revalidate');   // HTTP/1.1
 	Header( 'Content-Type: text/html;charset=utf-8' );     // TODO- proper XHTML headers...
-	Header( 'Expires: Tue, 23 Jun 2009 12:00:00 GMT' );    // Date in the past
+	Header( 'Admin: mail@anir0y.in' );    // Date in the past
+	Header(	'ServerID: D3V');
 
 	echo "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
@@ -362,6 +377,16 @@ function dvwaHelpHtmlEcho( $pPage ) {
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"" . DVWA_WEB_PAGE_TO_ROOT . "dvwa/css/help.css\" />
 
 		<link rel=\"icon\" type=\"\image/ico\" href=\"" . DVWA_WEB_PAGE_TO_ROOT . "favicon.ico\" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172843354-2"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-172843354-2');
+		</script>
+		
 
 	</head>
 
@@ -399,6 +424,16 @@ function dvwaSourceHtmlEcho( $pPage ) {
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"" . DVWA_WEB_PAGE_TO_ROOT . "dvwa/css/source.css\" />
 
 		<link rel=\"icon\" type=\"\image/ico\" href=\"" . DVWA_WEB_PAGE_TO_ROOT . "favicon.ico\" />
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172843354-2"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-172843354-2');
+		</script>
+		
 
 	</head>
 
