@@ -47,7 +47,10 @@ $messagesHtml = messagesPopAllToHtml();
 
 Header( 'Cache-Control: no-cache, must-revalidate');    // HTTP/1.1
 Header( 'Content-Type: text/html;charset=utf-8' );      // TODO- proper XHTML headers...
-Header( 'Expires: Tue, 23 Jun 2009 12:00:00 GMT' );     // Date in the past
+Header( 'Creds: admin:Arishti ' );     // Date in the past<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
 
 // Anti-CSRF
 generateSessionToken();
@@ -61,9 +64,12 @@ echo "
 
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />
 
-		<title>Login :: Damn Vulnerable Web Application (DVWA) v" . dvwaVersionGet() . "</title>
+		<title>Login :: DVWA maintained by Arishti" . dvwaVersionGet() . "</title>
 
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"" . DVWA_WEB_PAGE_TO_ROOT . "dvwa/css/login.css\" />
+
+		
+
 
 	</head>
 
@@ -125,6 +131,7 @@ echo "
 	</div> <!--<div id=\"footer\"> -->
 
 	</div> <!--<div id=\"wrapper\"> -->
+	<!-- Default creds: admin:Arishti -->
 
 	</body>
 
